@@ -1,6 +1,18 @@
 
 # Automated Classification of Overfitting Patches with Statically Extracted Code Features
-In this repository, we do overfitting decttion system (ODS) for program repair patches.
+
+This is the repository of [Automated Classification of Overfitting Patches with Statically Extracted Code Features](http://arxiv.org/pdf/1910.12057) ([doi:10.1109/tse.2021.3071750](https://doi.org/10.1109/tse.2021.3071750))
+
+```
+@article{ye2021ods,
+ title = {Automated Classification of Overfitting Patches with Statically Extracted Code Features},
+ author = {He Ye and Jian Gu and Matias Martinez and Thomas Durieux and Martin Monperrus},
+ journal = {IEEE Transactions on Software Engineering},
+ year = {2021},
+ doi = {10.1109/tse.2021.3071750},
+}
+```
+
 
 
 ## Folder Structure
