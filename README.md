@@ -50,7 +50,7 @@ https://github.com/SpoonLabs/coming.git
 mvn install -DskipTests
 ```
 
-## execute the following script with the demo samples in Coming project. You will see a generated csv file called test.csv and the code features in Json format in output path.
+## execute the following script with the demo samples in Coming project. You will get a generated csv file called test.csv and the code features in Json format in output path.
 ```
 java -classpath ./target/coming-0-SNAPSHOT-jar-with-dependencies.jar fr.inria.coming.main.ComingMain -input files -mode features -location ./src/main/resources/pairsD4j -output ./out
 ```
@@ -62,7 +62,7 @@ Please be noted that Coming project requires the specific structures of input so
 │       ├── <diff_folder>_<modif_file>_s.java
 │       └── <diff_folder>_<modif_file>_t.java
 ```
-## get the test.csv ready and predict it with the following. You will fine a prediction result generated in prediction.csv.
+## get the test.csv ready and predict it with the following code. You will find the prediction result generated in prediction.csv.
 ```
 python3 predict.py
 
