@@ -49,11 +49,7 @@ We use the default parameters of XGBoost (i.e., learning_rate sets to 0.3 and ma
 https://github.com/SpoonLabs/coming.git
 mvn install -DskipTests
 ```
-## make sure to configure the cross feature to true. 
-Coming project /src/main/resources/config-coming.properties
-```
-cross = true
-```
+
 ## execute the following script with the demo samples in Coming project. You will see a generated csv file called test.csv and the code features in Json format in output path.
 ```
 java -classpath ./target/coming-0-SNAPSHOT-jar-with-dependencies.jar fr.inria.coming.main.ComingMain -input files -mode features -location ./src/main/resources/pairsD4j -output ./out
