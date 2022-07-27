@@ -52,7 +52,6 @@ if __name__ == '__main__':
         eval_set=[(X_train,Y_train)]
         model.fit(X_train,Y_train, early_stopping_rounds=30, eval_metric="mae", eval_set=eval_set)
         Y_pred = model.predict(X_test)
-        print(Y_pred)
         result={'patch':id_test,'prediction_label':Y_pred}
         resultDF = pd.DataFrame(result)
         resultDF.to_csv('./prediction.csv')
