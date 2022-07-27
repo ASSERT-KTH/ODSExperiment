@@ -42,6 +42,34 @@ Use the feature mode of Coming to obtain ODS features.
 We use the default parameters of XGBoost (i.e., learning_rate sets to 0.3 and max_depth sets to 6), only turning the gamma to 0.5. All parameters can be found in our notebooks. 
 
 
+# How to use ODS to predict new and unseen patches:
 
+## checkout Coming repository and build it with maven command. Please note the Java version is 1.8.
+```
+https://github.com/SpoonLabs/coming.git
+mvn install -DskipTests
+```
 
+## execute the following script with the demo samples in Coming project. You will get a generated csv file called test.csv and the code features in Json format in output path.
+```
+java -classpath ./target/coming-0-SNAPSHOT-jar-with-dependencies.jar fr.inria.coming.main.ComingMain -input files -mode features -location ./src/main/resources/pairsD4j -output ./out
+```
+Please be noted that Coming project requires the specific structures of input source and target files: 
+```
+<location_arg>
+├── <diff_folder>
+│   └── <modif_file>
+│       ├── <diff_folder>_<modif_file>_s.java
+│       └── <diff_folder>_<modif_file>_t.java
+```
+## get the test.csv ready and predict it with the following code. You will find the prediction result generated in prediction.csv.
+```
+python3 predict.py
+
+You may also need the dependecies:
+python3 -m pip install  xgboost
+python3 -m pip install scikit-learn
+python3 -m pip install imblearn
+python3 -m pip install matplotlib
+```
 
